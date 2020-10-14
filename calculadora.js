@@ -1,12 +1,32 @@
-function calcula(){
-    var num1=document.getElementById("num1").value;
-    var num2=document.getElementById("num2").value;
-    var resultado = parseInt(num1)+parseInt(num2);
-    var calc=document.getElementById("resultado");
-    calc.innerHTML= resultado;
+const calcular = () => {
+	const op = document.getElementById('options').value
+	const num1 =document.getElementById("num1").value;
+    const num2 =document.getElementById("num2").value;	
+	let total = 0;
+	
+	switch (op) {
+		case 'soma':
+			total = parseInt(num1) + parseInt(num2)
+			document.getElementById('resultado').innerHTML = total
+			break;
 
-    calc.style.display='inline';
+		case 'sub':
+			total = num1 - num2
+			document.getElementById('resultado').innerHTML = total
+			break;
 
-    
-    
+		case 'multi':
+			total = num1 * num2
+			document.getElementById('resultado').innerHTML = total
+			break;
+
+		case 'div':
+			total = num1 / num2
+			document.getElementById('resultado').innerHTML = total
+			break;
+		default:
+			return false;
+			break;
+	}
+
 }

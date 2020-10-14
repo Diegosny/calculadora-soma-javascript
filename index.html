@@ -2,18 +2,32 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
-     <title>Page Title</title>
+     <title>Calculadora</title>
      <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="calculadora.js"></script>
 </head>
 <body>
    
+      <div class="math">
+          <select name="" id="options">
+              <option value="soma">+</option>
+              <option value="sub">-</option>
+              <option value="multi">*</option>
+              <option value="div">/</option>
+          </select>
+      </div>
+
+      <div class="math">
         <input type="text" id="num1" />
-       <span> + </span>
         <input type="text" id="num2" />
-        <input type="submit" onclick="calcula();" value="Calcular" />
-        <span> = </span>
+        
         <div id="resultado"></div>
+      </div>
+
+      <div class="math">
+        <button onclick="calcular()">Calcular</button>
+      </div>
+
     
 </body>
 </html>
